@@ -1,3 +1,9 @@
+const title = document.getElementById('title');
+title.innerHTML = "Downloader";
+title.style.color = "red";
+function alert_button(str) {
+    alert(str);
+}
 /* 
 
 1. URL , 시간, 길이 을 입력받는다
