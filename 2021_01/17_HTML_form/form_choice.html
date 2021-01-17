@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <form action="http://localhost/dropbox.php">
+            <h1>드롭박스 1</h1>
+            <select name="dropbox">
+                <option value="value쓰면">드롭박스</option>
+                <option value="실제 전송 정보는">콤보박스</option>
+                <option value="value로 바뀐다">대강 뭐 그런 명칭</option>
+            </select>
+            <input type="submit">
+            <h1>콤보박스 2(다중선택) </h1>
+            <select name="dropbox" multiple>
+                <option value="value쓰면">드롭박스</option>
+                <option value="실제 전송 정보는">콤보박스</option>
+                <option value="value로 바뀐다">대강 뭐 그런 명칭</option>
+            </select>
+            <input type="submit">
+            <form action="http://localhost/radio.php">
+                <h1>라디오 버튼 </h1>
+                <p>
+                    name<input type="radio" name="이름">
+                    값이<input type="radio" name="이름">
+                    같으면<input type="radio" name="이름">
+                    버튼을<input type="radio" name="이름">
+                </p>
+                <p>
+                    공유한다<input type="radio" name="이름">
+                    다음 줄은<input type="radio" name="이름">
+                    name 다름<input type="radio" name="이름">
+                    알간<input type="radio" name="이름">
+                </p>
+                <p>
+                    name<input type="radio" name="곰">
+                    값이<input type="radio" name="곰">
+                    같으면<input type="radio" name="곰">
+                    중<input type="radio" name="곰">
+                </p>
+                <p>
+                    복<input type="radio" name="곰">
+                    불<input type="radio" name="곰">
+                    가<input type="radio" name="곰">
+                    능<input type="radio" name="곰">
+                </p>
+                <input type="submit">
+            </form>
+            <h1>체크박스 </h1>
+            <form action="http://localhost/checkbox.php">
+                <p>
+                    중    <input type="checkbox" name="체크박" checked>
+                    복   <input type="checkbox" name="체크박">
+                    가  <input type="checkbox" name="체크박">
+                    능 <input type="checkbox" name="체크박">
+                </p>
+                <input type="submit">
+            </form>
+    </body>
+</html>
