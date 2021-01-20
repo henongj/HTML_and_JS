@@ -9,9 +9,30 @@ URL 과 영상의 시작시간 다운로드할 영상 길이를 입력하면 다
 2021-01-15 // HTML 수정 // 그리고 HTML 공부 시작
 
 
+2021-01-20 // HTML에 js코드를 다 때려박기로 결정
 
+function get_info(){
+    var start_minute = document.getElementById('a');
+     var fm = document.getElementById('fm');
+    var min = start_minute.value;
+    var start_second = document.getElementById('b');
+    var minute = document.getElementById('len_min');
+    var second = document.getElementById('len_second');
+    console.log(start_minute);
+    console.log(start_second);
+    console.log(minute);
+    console.log(second);
+    console.log(min);
+      console.log(fm);
+      console.log(fm.a.value);
+    window.open('http://www.daum.net ', '_blank'); 
+const message2 = "name: John/age: 30/country: korea";
+const arr2 = message2.split("/");
+console.log(arr2); // ["name: John", "age: 30", "country: korea"]
+    
+}
 
-
+일단 익히고 확인해서 추가해야 할 기능을 인터넷에서 죄다 복붙해서 때려넣음
 
 
 
