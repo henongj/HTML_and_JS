@@ -1,50 +1,70 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <script type="text/javascript" src="code.js"></script>
                     <script>
 function get_info(){
-    var start_minute = document.getElementById('a');
-     var fm = document.getElementById('fm');
-    var min = start_minute.value;
-    var start_second = document.getElementById('b');
-    var minute = document.getElementById('len_min');
-    var second = document.getElementById('len_second');
-    console.log(start_minute);
-    console.log(start_second);
-    console.log(minute);
-    console.log(second);
-    console.log(min);
-      console.log(fm);
-      console.log(fm.a.value);
-    window.open('http://www.daum.net ', '_blank'); 
-const message2 = "name: John/age: 30/country: korea";
-const arr2 = message2.split("/");
-console.log(arr2); // ["name: John", "age: 30", "country: korea"]
+    var url = document.getElementById('url').value;
+    var start_minute = document.getElementsByClassName('m');
+    var start_second = document.getElementById('start_second');
     
+  //   
+  
+const tokenized = url.split("_"); // 조각난 문자열 배열
+var target_url = tokenized[0];
+for(var i = 1; i < tokenized.length - 1 ; i++)
+{
+    target_url = target_url + "_" + tokenized[i];
 }
+
+var target_url_start_number = 0; // 시작 숫자 구하는 변수
+for(var i = 0 ; i < start_minute.length ; i++)
+{
+    //시작 숫자 구하는 내용
+}
+
+target_url = target_url + "_" + target_url_start_number + ".ts"
+
+//select.option[select.selectedindex].value
+
+console.log(start_minute);
+
+console.log(start_second.value);
+
+console.log(url);
+console.log(tokenized);
+console.log("target_url : " , target_url);
+
+window.open(target_url, '_blank');
+
+}
+
+function get_number( name1 , name2 )
+{
+
+}
+
 </script>
 
     </head>
     <body>
         <form action="code.js" id = "fm">
             <h1>URL</h1>
-            <input type=txt size=60>
+            <input type=txt size=60 id = "url">
             <h1>시작시간 </h1>
             <li>
-                30분 <input type="checkbox" value=180 name="start_ten_min" id = "a">
-                20분 <input type="checkbox" value=120 name="start_ten_min" id = "b">
-                10분 <input type="checkbox" value=60 name="start_ten_min" id = "c">
+                30분 <input type="checkbox" value=180 name="start_ten_min" class = "m">
+                20분 <input type="checkbox" value=120 name="start_ten_min" class = "m">
+                10분 <input type="checkbox" value=60 name="start_ten_min" class = "m">
             </li>
             <li>
-                5분<input type="checkbox" value=30 name="start_min" id = "d">
-                4분<input type="checkbox" value=24 name="start_min" id = "d">
-                3분<input type="checkbox" value=18 name="start_min" id = "d">
-                2분<input type="checkbox" value=12 name="start_min" id = "d">
-                1분<input type="checkbox" value=6 name="start_min" id = "d">
+                5분<input type="checkbox" value=30 name="start_min" class = "m">
+                4분<input type="checkbox" value=24 name="start_min" class = "m">
+                3분<input type="checkbox" value=18 name="start_min" class = "m">
+                2분<input type="checkbox" value=12 name="start_min" class = "m">
+                1분<input type="checkbox" value=6 name="start_min" class = "m">
             </li>
             <li>
-                <select name="dropbox">
+                <select name="dropbox" id = "start_second">
                     <option value=1>10초</option>
                     <option value=2>20초</option>
                     <option value=3>30초</option>
@@ -54,13 +74,13 @@ console.log(arr2); // ["name: John", "age: 30", "country: korea"]
             </li>
             <h1>영상 길이 </h1>
             <p>
-                <select name="len_min">
+                <select name="len_min" id = "len_m">
                     <option value=6>1분</option>
                     <option value=12>2분</option>
                     <option value=18>3분</option>
                     <option value=24>4분</option>
                 </select>
-                <select name="len_second">
+                <select name="len_sec" id = "len_s">
                     <option value=1>10초</option>
                     <option value=2>20초</option>
                     <option value=3>30초</option>
